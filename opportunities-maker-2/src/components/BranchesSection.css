@@ -1,0 +1,767 @@
+.branches-section {
+  padding: 20px 0;
+  direction: rtl;
+}
+
+.branches-section .container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 80px;
+}
+
+.branches-content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: flex-end;
+  background-color: var(--background-light-beige);
+  border-radius: 10px;
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.16);
+  padding: 20px;
+}
+
+.branches-header {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: stretch;
+  width: 100%;
+  opacity: 0;
+  transform: translateY(-30px);
+  animation: fadeInDown 0.8s ease-out 0.2s forwards;
+}
+
+.branches-header-titles-row {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.branches-hero-line {
+  font-family: var(--font-family);
+  font-size: 28px;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-black);
+  line-height: 1.35;
+  margin: 0;
+  text-align: center;
+  white-space: pre-wrap;
+  width: 100%;
+}
+
+.branches-company-line {
+  font-family: var(--font-family);
+  font-size: 16px;
+  font-weight: var(--font-weight-medium);
+  color: var(--color-primary-nav);
+  line-height: 1.4;
+  margin: 8px 0 0 0;
+  text-align: center;
+  white-space: pre-wrap;
+}
+
+.branches-header-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px 0;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+
+.branches-header-top-2 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex: 1;
+  min-width: 0;
+  max-width: none;
+  padding: 10px 0;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.branches-header-item {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+}
+
+.branches-title {
+  font-family: var(--font-family);
+  font-size: 32px;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary-nav);
+  line-height: 1;
+  margin: 0;
+  text-align: center;
+}
+
+.branches-icon-wrapper {
+  width: 30.48px;
+  height: 30.4px;
+  position: relative;
+  overflow: hidden;
+}
+
+.branches-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.branches-contact-header {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.branches-contact-title-wrapper {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.branches-contact-title {
+  font-family: var(--font-family);
+  font-size: 32px;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary-nav);
+  line-height: 1;
+  margin: 0;
+  text-align: right;
+}
+
+.branches-contact-icon {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.call-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.branches-subtitle {
+  font-family: var(--font-family);
+  font-size: 32px;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-black);
+  line-height: 1;
+  margin: 0;
+  text-align: right;
+  white-space: pre-wrap;
+}
+
+.branches-main {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  direction: rtl;
+}
+
+.branches-map {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 0;
+  opacity: 0;
+  transform: scale(0.8);
+  animation: zoomIn 0.8s ease-out 0.4s forwards;
+}
+
+.map-container {
+  background-color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.map-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.map-img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.branches-addresses {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.address-item {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  justify-content: flex-end;
+  width: 100%;
+  direction: rtl;
+  opacity: 1;
+  transform: translateX(0);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .branches-map {
+    opacity: 1 !important;
+    animation: none !important;
+    transform: none !important;
+  }
+}
+
+.address-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.address-icon {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.location-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.address-city {
+  font-weight: var(--font-weight-bold);
+}
+
+.address-text {
+  flex: 1;
+  font-family: var(--font-family);
+  font-size: 24px;
+  font-weight: var(--font-weight-medium);
+  color: var(--color-black);
+  line-height: 1.2;
+  margin: 0;
+  text-align: right;
+  white-space: pre-wrap;
+}
+
+.branches-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-end;
+  width: 100%;
+  max-width: 398px;
+  flex-shrink: 0;
+  opacity: 0;
+  transform: translateX(-30px);
+  animation: fadeInLeft 0.8s ease-out 0.5s forwards;
+}
+
+.branches-phone {
+  background-color: var(--color-white);
+  display: flex;
+  align-items: center;
+  padding: 14px 10px;
+  border-radius: 10px;
+  width: 100%;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s ease-out 0.7s forwards;
+}
+
+.phone-number {
+  font-family: var(--font-family);
+  font-size: 28px;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary-nav);
+  line-height: 1;
+  margin: 0;
+  text-align: right;
+  width: 100%;
+  white-space: pre-wrap;
+  direction: ltr;
+  text-decoration: none;
+}
+
+a.phone-number:hover {
+  opacity: 0.85;
+}
+
+.branches-retrieval-time {
+  background-color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-end;
+  padding: 14px 10px;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.retrieval-time-title {
+  font-family: var(--font-family);
+  font-size: 24px;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary-nav);
+  line-height: 1;
+  margin: 0;
+  text-align: right;
+  width: 100%;
+}
+
+.retrieval-time-content {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: flex-end;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-end;
+  width: 100%;
+}
+
+.retrieval-time-text {
+  font-family: var(--font-family);
+  font-size: 22px;
+  font-weight: var(--font-weight-regular);
+  color: var(--color-primary-nav);
+  line-height: 1.4;
+  margin: 0;
+  text-align: right;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: flex-start;
+}
+
+.retrieval-time-text-span {
+  font-weight: var(--font-weight-bold);
+  font-size: 24px;
+}
+
+.branches-logo {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  background-color: var(--color-white);
+  padding: 20px;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s ease-out 0.9s forwards;
+}
+
+.logo-img {
+  width: 70%;
+  height: 70%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .branches-section .container {
+    padding: 0 30px;
+  }
+
+  .branches-header-top-2 {
+    max-width: 350px;
+  }
+
+  .branches-info {
+    max-width: 350px;
+  }
+
+  .branches-logo {
+    height: 100%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .branches-section .container {
+    padding: 0 24px;
+  }
+
+  .branches-header {
+    flex-direction: column;
+    gap: 25px;
+    align-items: flex-start;
+  }
+
+  .branches-header-top {
+    width: 100%;
+    align-items: center;
+  }
+
+  .branches-header-top-2 {
+    width: 100%;
+    max-width: 100%;
+    align-items: center;
+  }
+
+  .branches-main {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .branches-info {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .branches-map {
+    width: 100%;
+  }
+
+  .branches-logo {
+    height: 100%;
+  }
+
+  .map-img {
+    height: 220px;
+  }
+}
+
+@media (max-width: 900px) {
+  .branches-title {
+    font-size: 30px;
+  }
+
+  .branches-subtitle {
+    font-size: 28px;
+  }
+
+  .branches-contact-title {
+    font-size: 30px;
+  }
+
+  .phone-number {
+    font-size: 26px;
+  }
+
+  .retrieval-time-title {
+    font-size: 22px;
+  }
+
+  .retrieval-time-text {
+    font-size: 18px;
+  }
+
+  .address-text {
+    font-size: 22px;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .branches-section {
+    padding: 40px 0;
+  }
+
+  .branches-section .container {
+    padding: 0 20px;
+  }
+
+  .branches-content {
+    padding: 20px;
+    gap: 25px;
+  }
+
+  .branches-header {
+    gap: 20px;
+  }
+
+  .branches-header-top {
+    gap: 15px;
+  }
+
+  .branches-header-top-2 {
+    gap: 10px;
+  }
+
+  .branches-title {
+    font-size: 28px;
+  }
+
+  .branches-subtitle {
+    font-size: 24px;
+    line-height: 1.2;
+  }
+
+  .branches-contact-title {
+    font-size: 28px;
+  }
+
+  .branches-contact-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .phone-number {
+    font-size: 24px;
+  }
+
+  .retrieval-time-title {
+    font-size: 20px;
+  }
+
+  .retrieval-time-text {
+    font-size: 16px;
+  }
+
+  .address-text {
+    font-size: 20px;
+    line-height: 1.3;
+  }
+
+  .branches-logo {
+    height: 100%;
+  }
+
+  .map-img {
+    height: 200px;
+  }
+
+  .map-container {
+    padding: 16px;
+    gap: 16px;
+  }
+
+  .branches-addresses {
+    gap: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .branches-section {
+    padding: 35px 0;
+  }
+
+  .branches-section .container {
+    padding: 0 16px;
+  }
+
+  .branches-content {
+    padding: 16px;
+    gap: 20px;
+  }
+
+  .branches-header {
+    gap: 18px;
+  }
+
+  .branches-title {
+    font-size: 26px;
+  }
+
+  .branches-subtitle {
+    font-size: 22px;
+  }
+
+  .branches-contact-title {
+    font-size: 26px;
+  }
+
+  .phone-number {
+    font-size: 22px;
+  }
+
+  .retrieval-time-title {
+    font-size: 18px;
+  }
+
+  .retrieval-time-text {
+    font-size: 15px;
+  }
+
+  .address-text {
+    font-size: 18px;
+  }
+
+  .branches-logo {
+    height: 100%;
+  }
+
+  .map-img {
+    height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .branches-section {
+    padding: 30px 0;
+  }
+
+  .branches-section .container {
+    padding: 0 12px;
+  }
+
+  .branches-content {
+    padding: 14px;
+    gap: 18px;
+  }
+
+  .branches-header {
+    gap: 15px;
+  }
+
+  .branches-header-top {
+    gap: 12px;
+  }
+
+  .branches-header-top-2 {
+    gap: 8px;
+  }
+
+  .branches-title {
+    font-size: 24px;
+  }
+
+  .branches-subtitle {
+    font-size: 20px;
+    line-height: 1.3;
+  }
+
+  .branches-contact-title {
+    font-size: 24px;
+  }
+
+  .branches-contact-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .phone-number {
+    font-size: 20px;
+  }
+
+  .retrieval-time-title {
+    font-size: 16px;
+  }
+
+  .retrieval-time-text {
+    font-size: 14px;
+  }
+
+  .address-text {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+
+  .branches-logo {
+    height: 100%;
+  }
+
+  .map-img {
+    height: 160px;
+  }
+
+  .map-container {
+    padding: 12px;
+    gap: 12px;
+  }
+
+  .branches-addresses {
+    gap: 12px;
+  }
+
+  .address-icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .branches-phone {
+    padding: 12px 8px;
+  }
+}
+
+@media (max-width: 360px) {
+  .branches-section {
+    padding: 25px 0;
+  }
+
+  .branches-section .container {
+    padding: 0 10px;
+  }
+
+  .branches-content {
+    padding: 12px;
+    gap: 15px;
+  }
+
+  .branches-title {
+    font-size: 22px;
+  }
+
+  .branches-subtitle {
+    font-size: 18px;
+  }
+
+  .branches-contact-title {
+    font-size: 22px;
+  }
+
+  .phone-number {
+    font-size: 18px;
+  }
+
+  .retrieval-time-title {
+    font-size: 15px;
+  }
+
+  .retrieval-time-text {
+    font-size: 13px;
+  }
+
+  .address-text {
+    font-size: 15px;
+  }
+
+  .branches-logo {
+    height: 100%;
+  }
+
+  .map-img {
+    height: 140px;
+  }
+}

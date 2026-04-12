@@ -1,0 +1,510 @@
+.work-method-section {
+  padding: 20px 0;
+  background-color: var(--color-white);
+  position: relative;
+  direction: rtl;
+  color-scheme: light;
+}
+
+.work-method-section .container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.work-method-content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+}
+
+/* غلاف الأنيميشن: يضمن تمركز العنوان والوصف رغم text-align: right العام في index.css */
+.work-method-intro-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.work-method-header {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  width: 100%;
+  max-width: min(1190px, 92vw);
+  margin-inline: auto;
+  padding: 0 20px;
+}
+
+.work-method-section .work-method-title {
+  font-family: var(--font-family);
+  font-size: 32px;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary-dark);
+  line-height: 1;
+  margin: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.work-method-section .work-method-subtitle {
+  font-family: var(--font-family);
+  font-size: 24px;
+  font-weight: var(--font-weight-medium);
+  color: var(--color-primary-nav);
+  line-height: 1.2;
+  margin: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.work-method-steps {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+}
+
+.steps-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 1120px;
+  z-index: 1;
+  gap: 190px;
+  padding: 60px 0px 25px;
+}
+
+.step-card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex: 1;
+}
+
+.step-number-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 180px;
+}
+
+.step-number-circle {
+  background-color: var(--color-primary-active);
+  border-radius: 36.944px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0.278px 4.111px 0px rgba(0, 0, 0, 0.63);
+  overflow: hidden;
+}
+
+.step-number {
+  font-family: var(--font-family);
+  font-size: 23.333px;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-black);
+  line-height: 1;
+  text-align: center;
+}
+
+.step-description {
+  font-family: var(--font-family);
+  font-size: 20px;
+  font-weight: var(--font-weight-regular);
+  color: var(--color-white);
+  line-height: 2rem;
+  text-align: center;
+  min-height: 88px;
+  width: 100%;
+  max-width: 278px;
+  margin: 0;
+  white-space: pre-wrap;
+}
+
+/* Background decorative elements */
+.work-method-steps::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-primary-dark) 0%, var(--color-primary-dark) 100%);
+  z-index: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1400px) {
+  .work-method-steps::before {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .work-method-section .container {
+    padding: 0 40px;
+  }
+
+  .steps-container {
+    gap: 25px;
+    max-width: 100%;
+  }
+
+  .step-card {
+    max-width: 280px;
+  }
+
+  .step-description {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .work-method-section .container {
+    padding: 0 30px;
+  }
+
+  .work-method-header {
+    padding: 0 10px;
+  }
+
+  .work-method-section .work-method-title {
+    font-size: 30px;
+  }
+
+  .work-method-section .work-method-subtitle {
+    font-size: 22px;
+  }
+
+  .steps-container {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 35px;
+    margin-bottom: -150px;
+    padding: 0 15px;
+  }
+
+  .step-card {
+    max-width: 280px;
+    flex: 0 0 auto;
+  }
+
+  .work-method-steps {
+    padding-bottom: 150px;
+  }
+
+  .work-method-steps::before {
+    height: 200px;
+    
+  }
+
+  .step-description {
+    font-size: 17px;
+    max-width: 260px;
+  }
+}
+
+@media (max-width: 900px) {
+  .steps-container {
+    gap: 30px;
+  }
+
+  .step-card {
+    max-width: 250px;
+  }
+
+  .step-description {
+    font-size: 16px;
+    max-width: 240px;
+  }
+}
+
+@media (max-width: 768px) {
+  .work-method-section {
+    padding: 40px 0;
+  }
+
+  .work-method-section .container {
+    padding: 0 20px;
+  }
+
+  .work-method-content {
+    gap: 25px;
+  }
+
+  .work-method-header {
+    padding: 0;
+    gap: 8px;
+  }
+
+  .work-method-section .work-method-title {
+    font-size: 28px;
+  }
+
+  .work-method-section .work-method-subtitle {
+    font-size: 20px;
+  }
+
+  .work-method-steps {
+    padding-bottom: 120px;
+  }
+
+  .work-method-steps::before {
+    height: 100%;
+  }
+
+  .steps-container {
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: -120px;
+    padding: 20px;
+    align-items: center;
+  }
+
+  .step-card {
+    max-width: 100%;
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .step-number-wrapper {
+    width: 100%;
+    max-width: 180px;
+  }
+
+  .step-description {
+    font-size: 16px;
+    min-height: auto;
+    max-width: 100%;
+    width: 100%;
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 600px) {
+  .work-method-section {
+    padding: 35px 0;
+  }
+
+  .work-method-section .container {
+    padding: 0 16px;
+  }
+
+  .work-method-content {
+    gap: 22px;
+  }
+
+  .work-method-section .work-method-title {
+    font-size: 26px;
+  }
+
+  .work-method-section .work-method-subtitle {
+    font-size: 19px;
+  }
+
+  .work-method-steps {
+    padding-bottom: 110px;
+  }
+
+  .work-method-steps::before {
+    height: 100%;
+  }
+
+  .steps-container {
+    gap: 28px;
+    margin-bottom: -110px;
+    padding: 20px;
+  }
+
+  .step-card {
+    gap: 18px;
+    max-width: 100%;
+  }
+
+  .step-description {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .work-method-section {
+    padding: 30px 0;
+  }
+
+  .work-method-section .container {
+    padding: 0 16px;
+  }
+
+  .work-method-content {
+    gap: 20px;
+  }
+
+  .work-method-header {
+    gap: 6px;
+  }
+
+  .work-method-section .work-method-title {
+    font-size: 24px;
+    line-height: 1.2;
+  }
+
+  .work-method-section .work-method-subtitle {
+    font-size: 18px;
+    line-height: 1.3;
+  }
+
+  .work-method-steps {
+    padding-bottom: 100px;
+  }
+
+  .work-method-steps::before {
+    height: 100%;
+  }
+
+  .steps-container {
+    gap: 25px;
+    margin-bottom: -100px;
+    padding: 20px;
+  }
+
+  .step-card {
+    gap: 15px;
+  }
+
+  .step-number-wrapper {
+    max-width: 150px;
+  }
+
+  .step-number-circle {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+  }
+
+  .step-number {
+    font-size: 20px;
+  }
+
+  .step-description {
+    font-size: 14px;
+    line-height: 1.5;
+    padding: 0 5px;
+  }
+}
+
+@media (max-width: 360px) {
+  .work-method-section {
+    padding: 25px 0;
+  }
+
+  .work-method-section .container {
+    padding: 0 12px;
+  }
+
+  .work-method-section .work-method-title {
+    font-size: 22px;
+  }
+
+  .work-method-section .work-method-subtitle {
+    font-size: 16px;
+  }
+
+  .work-method-steps {
+    padding-bottom: 90px;
+  }
+
+  .work-method-steps::before {
+    height: 140px;
+  }
+
+  .steps-container {
+    gap: 22px;
+    margin-bottom: -90px;
+  }
+
+  .step-number-circle {
+    width: 40px;
+    height: 40px;
+  }
+
+  .step-number {
+    font-size: 18px;
+  }
+
+  .step-description {
+    font-size: 12px;
+    line-height: 1.6;
+  }
+}
+
+/* الوضع الداكن: عنوان أسود + وصف ذهبي على خلفية بيضاء */
+@media (prefers-color-scheme: dark) {
+  .work-method-section {
+    background-color: #ffffff;
+  }
+
+  .work-method-section .work-method-title {
+    color: var(--color-primary-dark);
+  }
+
+  .work-method-section .work-method-subtitle {
+    color: var(--color-primary-active);
+  }
+
+  .work-method-steps::before {
+    background: linear-gradient(
+      90deg,
+      var(--color-primary-dark) 0%,
+      var(--color-primary-dark) 100%
+    );
+  }
+
+  .step-description {
+    color: #ffffff;
+  }
+
+  .step-number {
+    color: var(--color-black);
+  }
+}
+
+html.dark .work-method-section,
+html[data-theme='dark'] .work-method-section {
+  background-color: #ffffff;
+}
+
+html.dark .work-method-section .work-method-title,
+html[data-theme='dark'] .work-method-section .work-method-title {
+  color: var(--color-primary-dark);
+}
+
+html.dark .work-method-section .work-method-subtitle,
+html[data-theme='dark'] .work-method-section .work-method-subtitle {
+  color: var(--color-primary-active);
+}
+
+html.dark .work-method-steps::before,
+html[data-theme='dark'] .work-method-steps::before {
+  background: linear-gradient(
+    90deg,
+    var(--color-primary-dark) 0%,
+    var(--color-primary-dark) 100%
+  );
+}
+
+html.dark .step-description,
+html[data-theme='dark'] .step-description {
+  color: #ffffff;
+}

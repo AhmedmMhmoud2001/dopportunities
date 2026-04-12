@@ -1,0 +1,216 @@
+/* Premium SaaS — Black, White & Gold design tokens */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root,
+html[data-theme='light'] {
+  --color-white: #ffffff;
+  --color-black: #111111;
+  --color-dark-black: #0f0f0f;
+  --color-gold: #d4af37;
+  --color-gold-hover: #b8941f;
+  --color-gold-soft: #fff8e6;
+  --border-light: #e5e5e5;
+  --border-dark: #2a2a2a;
+
+  --bg: #fafafa;
+  --bg-solid: #ffffff;
+  --text-h: #111111;
+  --text: #3d3d3d;
+  --border: #e5e5e5;
+  --panel: #ffffff;
+  --panel-2: #f5f5f5;
+  --muted: #737373;
+  --accent: #d4af37;
+  --accent-hover: #b8941f;
+  --accent-bg: rgba(212, 175, 55, 0.14);
+  --shadow: rgba(17, 17, 17, 0.06);
+  --shadow-card: 0 1px 2px rgba(17, 17, 17, 0.04), 0 4px 24px rgba(17, 17, 17, 0.06);
+
+  /* Primary actions: black tile + neutral hover (no gold) */
+  --btn-primary-bg: #000000;
+  --btn-primary-hover: #2a2a2a;
+  --btn-primary-text: #ffffff;
+  --btn-primary-ring: rgba(0, 0, 0, 0.35);
+  --btn-chromatic-cyan: rgba(56, 208, 255, 0.5);
+  --btn-chromatic-red: rgba(255, 85, 105, 0.52);
+
+  /* Dashboard chrome (sidebar + header) */
+  --dash-sidebar-bg: #ffffff;
+  --dash-sidebar-border: #e5e5e5;
+  --dash-sidebar-text: #111111;
+  --dash-sidebar-muted: #737373;
+  --dash-sidebar-active-bg: #fff8e6;
+  --dash-sidebar-active-border: #d4af37;
+  --dash-sidebar-hover-bg: rgba(212, 175, 55, 0.08);
+  --dash-header-bg: #ffffff;
+  --dash-header-border: #e5e5e5;
+
+  --sans: 'Cairo', 'Inter', system-ui, -apple-system, sans-serif;
+  --heading: 'Cairo', 'Inter', system-ui, -apple-system, sans-serif;
+  --mono: ui-monospace, 'Cascadia Code', Consolas, monospace;
+
+  font: 15px/1.5 var(--sans);
+  letter-spacing: 0.01em;
+  color: var(--text);
+  background: var(--bg);
+  color-scheme: light;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  @media (max-width: 1024px) {
+    font-size: 14px;
+  }
+}
+
+html[data-theme='dark'] {
+  --bg: #0f0f0f;
+  --bg-solid: #0f0f0f;
+  --text-h: #ffffff;
+  --text: #e5e5e5;
+  --border: #2a2a2a;
+  --panel: #171717;
+  --panel-2: #1f1f1f;
+  --muted: #a3a3a3;
+  --accent: #d4af37;
+  --accent-hover: #b8941f;
+  --accent-bg: rgba(212, 175, 55, 0.12);
+  --shadow: rgba(0, 0, 0, 0.5);
+  --shadow-card: 0 1px 0 rgba(255, 255, 255, 0.04), 0 8px 32px rgba(0, 0, 0, 0.45);
+
+  --btn-primary-bg: #000000;
+  --btn-primary-hover: #2a2a2a;
+  --btn-primary-text: #ffffff;
+  --btn-primary-ring: rgba(255, 255, 255, 0.22);
+  --btn-chromatic-cyan: rgba(56, 208, 255, 0.5);
+  --btn-chromatic-red: rgba(255, 85, 105, 0.52);
+
+  --dash-sidebar-bg: #0f0f0f;
+  --dash-sidebar-border: #2a2a2a;
+  --dash-sidebar-text: #ffffff;
+  --dash-sidebar-muted: #a3a3a3;
+  --dash-sidebar-active-bg: #171717;
+  --dash-sidebar-active-border: #d4af37;
+  --dash-sidebar-hover-bg: rgba(212, 175, 55, 0.1);
+  --dash-header-bg: #0f0f0f;
+  --dash-header-border: #2a2a2a;
+
+  color-scheme: dark;
+}
+
+html[data-theme='light'] {
+  color-scheme: light;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+#root {
+  min-height: 100svh;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--heading);
+  font-weight: 700;
+  color: var(--text-h);
+  line-height: 1.35;
+}
+
+h1 {
+  font-size: 26px;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: 20px;
+  letter-spacing: -0.015em;
+}
+
+a {
+  color: var(--accent);
+}
+
+a:hover {
+  color: var(--accent-hover);
+}
+
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text-h);
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 10px 14px;
+  outline: none;
+  max-width: 100%;
+  min-width: 0;
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+input[type='checkbox'],
+input[type='radio'] {
+  min-width: auto;
+  max-width: none;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--color-gold);
+  box-shadow: 0 0 0 3px var(--accent-bg);
+}
+
+input::placeholder {
+  color: var(--muted);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  text-align: right;
+  font-weight: 600;
+  color: var(--text-h);
+  font-size: 12px;
+  line-height: 1.4;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border);
+  background: var(--panel-2);
+}
+
+td {
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--border);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+tr:hover td {
+  background: var(--panel-2);
+}
+
+code {
+  font-family: var(--mono);
+  font-size: 13px;
+  background: var(--panel-2);
+  padding: 3px 8px;
+  border-radius: 6px;
+  color: var(--text-h);
+}

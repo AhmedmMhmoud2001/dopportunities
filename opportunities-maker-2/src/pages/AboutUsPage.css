@@ -1,0 +1,398 @@
+.about-us-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  direction: rtl;
+}
+
+.about-us-page::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('../assets/images/background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  z-index: 0;
+  opacity: 0.3;
+}
+
+.about-us-page > * {
+  position: relative;
+  z-index: 1;
+}
+
+.about-us-content {
+  flex: 1;
+  padding: 60px 0;
+}
+
+.about-us-content .container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header Section */
+.about-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.about-logo {
+  width: 200px;
+  height: 150px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.about-company-name-en {
+  font-family: var(--font-family);
+  font-size: 28px;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary-nav);
+  margin: 0 0 10px 0;
+  text-align: center;
+}
+
+.about-company-name-ar {
+  font-family: var(--font-family);
+  font-size: 24px;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary-nav);
+  margin: 0 0 10px 0;
+  text-align: center;
+}
+
+.about-company-name-en-sub {
+  font-family: var(--font-family);
+  font-size: 18px;
+  font-weight: var(--font-weight-regular);
+  color: var(--color-text-main);
+  margin: 0 0 5px 0;
+  text-align: center;
+}
+
+.about-cr-number {
+  font-family: var(--font-family);
+  font-size: 14px;
+  font-weight: var(--font-weight-regular);
+  color: var(--color-text-secondary);
+  margin: 0;
+  text-align: center;
+  opacity: 0.7;
+}
+
+/* Top Section - Mission, Vision, Company */
+.about-top-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.about-left-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.about-right-column {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Cards */
+.about-card {
+  background-color: var(--color-white);
+  border-radius: 15px;
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.1);
+  border-right: 1px solid var(--color-primary-dark);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.company-card,
+.consultant-card {
+  background-color: var(--color-white);
+  background-blend-mode: overlay;
+  
+}
+
+.company-card::before,
+.consultant-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.45);
+  z-index: 1;
+  border-radius: 15px;
+}
+
+.about-card-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+.company-card .about-card-background {
+  background-image: url('../assets/images/bg_image.jpg');
+}
+
+
+.about-card-title {
+  font-family: var(--font-family);
+  font-size: 24px;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary-nav);
+  margin: 0 0 20px 0;
+  text-align: right;
+  position: relative;
+  z-index: 2;
+}
+
+.about-card-title.bg {
+  color: var(--color-white);
+}
+
+.about-card-text {
+  font-family: var(--font-family);
+  font-size: 12px;
+  font-weight: var(--font-weight-regular);
+  color: var(--color-text-main);
+  line-height: 2rem;
+  margin: 0;
+  text-align: right;
+  position: relative;
+  z-index: 2;
+  min-width: 100% !important; 
+}
+
+.about-card-text.bg {
+  color: var(--color-white);
+}
+
+/* Consultant Banner */
+.consultant-banner {
+  position: relative;
+  background-color: var(--color-white);
+  border-radius: 15px;
+  overflow: hidden;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 20px;
+}
+
+.consultant-banner-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000000;
+  z-index: 0;
+}
+
+.consultant-banner-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;  
+}
+
+.consultant-banner-title {
+  font-family: var(--font-family);
+  font-size: 36px;
+  font-weight: var(--font-weight-bold);
+  color: #8B6914;
+  margin: 0;
+  text-align: right;
+  flex: 1;
+}
+
+.consultant-banner-image {
+  flex-shrink: 0;
+  position: relative;
+  z-index: 3;
+}
+
+.consultant-banner-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(139, 105, 20, 0.3);
+}
+
+.consultant-banner-text {
+  position: relative;
+  z-index: 2;
+  direction: rtl;
+}
+
+.consultant-text {
+  font-size: 12px;
+  line-height: 2rem;
+  color: var(--color-black);
+}
+
+/* Bottom Section */
+.about-bottom-section {
+  width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .about-top-section {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .about-left-column {
+    order: 2;
+  }
+
+  .about-right-column {
+    order: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-us-content {
+    padding: 40px 0;
+  }
+
+  .about-header {
+    margin-bottom: 40px;
+  }
+
+  .about-logo {
+    width: 100px;
+    height: 100px;
+  }
+
+  .about-company-name-en {
+    font-size: 24px;
+  }
+
+  .about-company-name-ar {
+    font-size: 20px;
+  }
+
+  .about-company-name-en-sub {
+    font-size: 16px;
+  }
+
+  .about-card {
+    padding: 24px;
+  }
+
+  .about-card-title {
+    font-size: 20px;
+    margin-bottom: 16px;
+  }
+
+  .about-card-text {
+    font-size: 11px;
+  }
+
+  .consultant-banner-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .consultant-banner-title {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .consultant-banner-avatar {
+    width: 150px;
+    height: 150px;
+  }
+
+  .consultant-banner-text {
+    padding: 0 30px 30px 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-us-content {
+    padding: 30px 0;
+  }
+
+  .about-logo {
+    width: 80px;
+    height: 80px;
+  }
+
+  .about-company-name-en {
+    font-size: 20px;
+  }
+
+  .about-company-name-ar {
+    font-size: 18px;
+  }
+
+  .about-card {
+    padding: 20px;
+  }
+
+  .about-card-title {
+    font-size: 18px;
+  }
+
+  .about-card-text {
+    font-size: 10px;
+    line-height: 1.7;
+  }
+
+
+  .consultant-banner-title {
+    font-size: 24px;
+  }
+
+  .consultant-banner-avatar {
+    width: 120px;
+    height: 120px;
+  }
+
+  .consultant-banner-text {
+    padding: 0 20px 20px 20px;
+  }
+
+  .consultant-text {
+    font-size: 10px;
+  }
+}
+
