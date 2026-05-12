@@ -19,6 +19,8 @@ import { HomeFeaturesPage } from './pages/home_features_page'
 import { HomeIntroPage } from './pages/home_intro_page'
 import { HomeWorkConsultantPage } from './pages/home_work_consultant_page'
 import FooterSocialPage from './pages/footer_social_page'
+import { SiteBrandingPage } from './pages/site_branding_page'
+import { ContactFormSettingsPage } from './pages/contact_form_settings_page'
 import { useLocale } from './hooks/use_locale'
 
 function App() {
@@ -168,6 +170,26 @@ function App() {
           <ProtectedRoute>
             <DashboardLayout>
               <FooterSocialPage />
+            </DashboardLayout>
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/settings/branding"
+        element={
+          <ProtectedRoute>
+            <DashboardLayout>
+              <SiteBrandingPage />
+            </DashboardLayout>
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/settings/contact-form"
+        element={
+          <ProtectedRoute>
+            <DashboardLayout>
+              <ContactFormSettingsPage />
             </DashboardLayout>
           </ProtectedRoute>
         }

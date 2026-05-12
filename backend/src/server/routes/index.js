@@ -15,6 +15,8 @@ import homeFeaturesRouter from './v1/homeFeatures.routes.js';
 import homeIntroRouter from './v1/homeIntro.routes.js';
 import homeWorkConsultantRouter from './v1/homeWorkConsultant.routes.js';
 import footerSocialRouter from './v1/footerSocial.routes.js';
+import siteBrandingRouter from './v1/siteBranding.routes.js';
+import contactFormSettingsRouter from './v1/contactFormSettings.routes.js';
 
 const router = Router();
 
@@ -34,5 +36,7 @@ router.use('/v1/home-features', homeFeaturesRouter);
 router.use('/v1/home-intro', homeIntroRouter);
 router.use('/v1/home-work-consultant', homeWorkConsultantRouter);
 router.use('/v1/footer-social', footerSocialRouter);
+router.use('/v1/site-branding', siteBrandingRouter);
+router.use('/v1/contact-form-settings', contactFormSettingsRouter);
 
 export default router;

@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import type { To } from 'react-router-dom';
 import logoImage from '../assets/images/logo_footer.png';
 import { apiRequest } from '../lib/api';
+import { useSiteBranding } from '../branding/site_branding_context';
 
 type SocialKey = 'twitter' | 'instagram' | 'youtube' | 'facebook' | 'linkedin' | 'tiktok';
 
@@ -82,6 +83,8 @@ function SocialIcon({ socialKey }: { socialKey: SocialKey }) {
 
 function Footer() {
   const [social, setSocial] = useState<SocialPayload | null>(null);
+  const { footerLogoResolved } = useSiteBranding();
+  const footerLogoSrc = footerLogoResolved ?? logoImage;
 
   useEffect(() => {
     let cancelled = false;
@@ -155,7 +158,7 @@ function Footer() {
 
             <div className="footer-column footer-about">
               <div className="footer-logo">
-                <img src={logoImage} alt="Logo" />
+                <img src={footerLogoSrc} alt="Logo" />
               </div>
               <p className="footer-description">
                 اللغات الأوروبية هي أعضاء في نفس العائلة. وجودها المنفصل هو أسطورة. بالنسبة للعلوم والموسيقى والرياضة، تستخدم أوروبا الصغيرة نفس المفردات. اللغات تختلف فقط في.

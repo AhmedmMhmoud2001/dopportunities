@@ -3,6 +3,7 @@ import './Header.css';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import logoImage from '../assets/images/logo.png';
 import { useAuth } from '../auth/auth_context';
+import { useSiteBranding } from '../branding/site_branding_context';
 
 interface NavItem {
   label: string;
@@ -37,6 +38,8 @@ function Header({
   const navigate = useNavigate();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { isAuthed, signOut } = useAuth();
+  const { headerLogoResolved } = useSiteBranding();
+  const logoSrc = headerLogoResolved ?? logoImage;
 
   const handleRegisterButtonClick = () => {
     setIsMobileMenuOpen(false);
@@ -59,7 +62,7 @@ function Header({
 
           {/* Logo - Right side in RTL */}
           <div className="header-logo">
-            <img src={logoImage} alt="Logo" />
+            <img src={logoSrc} alt="Logo" />
           </div>
 
           {/* Mobile Menu Button */}

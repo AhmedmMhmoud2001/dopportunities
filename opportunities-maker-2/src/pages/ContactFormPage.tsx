@@ -24,6 +24,7 @@ function ContactFormPage() {
   const [myRequests, setMyRequests] = useState<Array<{ id: number; trackingCode: string; status: string; activity: string; createdAt: string; notes?: string | null }>>([]);
   const [isLoadingMy, setIsLoadingMy] = useState(false);
   const [myRequestsError, setMyRequestsError] = useState<string | null>(null);
+  const [formNoticeText, setFormNoticeText] = useState<string | null>(null);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -63,6 +64,24 @@ function ContactFormPage() {
   }
 
   useEffect(() => {
+    let cancelled = false;
+    (async () => {
+      try {
+        const data = await apiRequest<{ noticeText?: string | null }>('/v1/contact-form-settings', {
+          cache: 'no-store',
+        });
+        const t = data?.noticeText?.trim();
+        if (!cancelled) setFormNoticeText(t ? t : null);
+      } catch {
+        if (!cancelled) setFormNoticeText(null);
+      }
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  useEffect(() => {
     loadMyRequests();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [token]);
@@ -75,6 +94,20 @@ function ContactFormPage() {
           <AnimatedSection animationType="fade-in-up" delay={0}>
             <div className="contact-form-wrapper">
               <form className="contact-form" onSubmit={handleSubmit}>
+                {formNoticeText ? (
+                  <div
+                    className="form-row"
+                    style={{
+                      marginBottom: 16,
+                      color: '#334155',
+                      fontSize: 15,
+                      lineHeight: 1.65,
+                      whiteSpace: 'pre-wrap',
+                    }}
+                  >
+                    {formNoticeText}
+                  </div>
+                ) : null}
                 {submitError && <div className="form-error" role="alert">{submitError}</div>}
                 <div className="form-row">
                   <div className="form-group">

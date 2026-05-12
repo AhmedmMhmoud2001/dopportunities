@@ -22,6 +22,8 @@ const navItems = [
   ] },
   { title: 'الإعدادات', items: [
     { to: '/settings/terms', label: 'الشروط والأحكام', icon: 'about' },
+    { to: '/settings/branding', label: 'شعارات الموقع', icon: 'brand' },
+    { to: '/settings/contact-form', label: 'رسالة التواصل', icon: 'contact' },
     { to: '/settings/footer-social', label: 'روابط السوشيال (الفوتر)', icon: 'social' },
   ] },
 ]
@@ -161,6 +163,16 @@ function IconSocial() {
   )
 }
 
+function IconBrand() {
+  return (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+      <rect x="3" y="3" width="18" height="18" rx="2" />
+      <circle cx="8.5" cy="8.5" r="1.5" />
+      <path d="M21 15l-5-5L5 21" />
+    </svg>
+  )
+}
+
 const icons = {
   home: IconHome,
   chart: IconChart,
@@ -176,6 +188,7 @@ const icons = {
   location: IconLocation,
   features: IconFeatures,
   social: IconSocial,
+  brand: IconBrand,
 }
 
 function IconPanelLeft({ size = 18 }) {

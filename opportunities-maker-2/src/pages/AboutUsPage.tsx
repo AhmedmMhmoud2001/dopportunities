@@ -2,6 +2,7 @@ import './AboutUsPage.css';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import logoImage from '../assets/images/logo.png';
+import { useSiteBranding } from '../branding/site_branding_context';
 import consultantAvatarImage from '../assets/images/anwer_ali.png';
 import AnimatedSection from '../components/AnimatedSection';
 import { useEffect, useState } from 'react';
@@ -9,6 +10,8 @@ import { apiRequest } from '../lib/api';
 import { MAIN_NAV_ITEMS } from '../config/mainNav';
 
 function AboutUsPage() {
+  const { headerLogoResolved } = useSiteBranding();
+  const aboutHeroLogoSrc = headerLogoResolved ?? logoImage;
   const [aboutTitle, setAboutTitle] = useState<string>('');
   const [aboutContent, setAboutContent] = useState<string>('');
   const [companyTitle, setCompanyTitle] = useState<string>('شركة صناع الفرص');
@@ -89,7 +92,7 @@ function AboutUsPage() {
           <AnimatedSection animationType="fade-in-down" delay={0}>
             <div className="about-header">
               <div className="about-logo">
-                <img src={logoImage} alt="Opportunities Makers Logo" />
+                <img src={aboutHeroLogoSrc} alt="Opportunities Makers Logo" />
               </div>
             </div>
           </AnimatedSection>

@@ -165,3 +165,18 @@ model FooterSocial {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
+
+// شعار الهيدر والفوتر في الموقع العام؛ صف واحد (id = 1)
+model SiteBranding {
+  id            Int      @id @default(1)
+  headerLogoUrl String?  @db.VarChar(2000)
+  footerLogoUrl String?  @db.VarChar(2000)
+  updatedAt     DateTime @updatedAt
+}
+
+// رسالة تنبيه فوق نموذج طلب التواصل (صف واحد، id = 1)
+model ContactFormSettings {
+  id         Int      @id @default(1)
+  noticeText String?  @db.Text
+  updatedAt  DateTime @updatedAt
+}

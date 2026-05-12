@@ -4,11 +4,14 @@ import './index.css'
 import './styles/animations.css'
 import App from './App.tsx'
 import { AuthProvider } from './auth/auth_context'
+import { SiteBrandingProvider } from './branding/site_branding_context'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <AuthProvider>
-      <App />
+      <SiteBrandingProvider>
+        <App />
+      </SiteBrandingProvider>
     </AuthProvider>
   </StrictMode>,
 )
